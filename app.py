@@ -8,7 +8,7 @@ base_path = './internlm2-chat-1_8b'
 os.system(f'git clone https://code.openxlab.org.cn/YongXie66/Personal_Assistant.git {base_path}')
 os.system(f'cd {base_path} && git lfs pull')
 
-model = AutoModelForCausalLM.from_pretrained(base_path,trust_remote_code=True, torch_dtype=torch.float16)
+model = AutoModelForCausalLM.from_pretrained(base_path,trust_remote_code=True, torch_dtype=torch.float16).cuda()
 tokenizer = AutoTokenizer.from_pretrained(base_path,trust_remote_code=True)
 
 def chat(message,history):
