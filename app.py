@@ -4,7 +4,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel
 from openxlab.model import download
 
-base_path = './Personal_Assistant'
+base_path = './internlm2-chat-1_8b'
 os.system(f'git clone https://code.openxlab.org.cn/YongXie66/Personal_Assistant.git {base_path}')
 os.system(f'cd {base_path} && git lfs pull')
 
